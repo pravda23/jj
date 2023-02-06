@@ -3,23 +3,23 @@ import { useState } from "react";
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 
 function App() {
-  const [volIsUp, setVolIsUp] = useState(false);
   const [volumeIcon, setVolumeIcon] = useState(false);
+  const [videoMuted, setVideoMuted] = useState("muted");
 
   const setVolumeOnClick = () => {
-    setVolIsUp(!volIsUp);
     setVolumeIcon(!volumeIcon);
+    setVideoMuted(videoMuted == "muted" ? "" : "muted");
   };
 
   const vidUrl = "https://getjohnnyjazz.com/resources/jjvid.mp4";
 
   return (
     <div className="App">
-      <video className="video" src={vidUrl} autoPlay loop muted />
+      <video className="video" src={vidUrl} autoPlay loop muted={videoMuted} />
       <div className="navbar-container">
         <div>The navbar</div>
         <div onClick={setVolumeOnClick}>
-          {volIsUp ? <FaVolumeUp /> : <FaVolumeMute />}
+          {volumeIcon ? <FaVolumeUp /> : <FaVolumeMute />}
         </div>
       </div>
       <div>
@@ -33,7 +33,9 @@ function App() {
       </div>
       <div className="contact-container">
         <h1>Contact</h1>
-        <p>Book JohnnyJazz</p>
+        <p className="btn btn-primary btn-lg">
+          <a href="mailto:music@johnbartmann.com">Book JohnnyJazz</a>
+        </p>
       </div>
     </div>
   );
