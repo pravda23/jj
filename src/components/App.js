@@ -3,12 +3,18 @@ import { useState } from "react";
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 
 function App() {
-  const [volIsUp, setVolIsUp] = useState(false);
-  const [volumeIcon, setVolumeIcon] = useState(false);
+  const [volume, setVolume] = useState({
+    audible: false,
+    icon: false,
+    video: "muted",
+  });
 
   const setVolumeOnClick = () => {
-    setVolIsUp(!volIsUp);
-    setVolumeIcon(!volumeIcon);
+    setVolume({
+      audible: true,
+      icon: true,
+      video: "",
+    });
   };
 
   const vidUrl = "https://getjohnnyjazz.com/resources/jjvid.mp4";
@@ -19,7 +25,7 @@ function App() {
       <div className="navbar-container">
         <div>The navbar</div>
         <div onClick={setVolumeOnClick}>
-          {volIsUp ? <FaVolumeUp /> : <FaVolumeMute />}
+          {volume ? <FaVolumeUp /> : <FaVolumeMute />}
         </div>
       </div>
       <div>
