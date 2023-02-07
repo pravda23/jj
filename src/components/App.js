@@ -1,45 +1,64 @@
+import { Routes, Route, BrowserRouter, Link } from "react-router-dom";
 import "../styles/App.styles.scss";
 import { useState } from "react";
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
+import About from "./About.component";
+import Footer from "./Footer.component";
+import Visuals from "./Visuals.component";
+import Navbar from "./Navbar.component";
 
 function App() {
-  const [volume, setVolume] = useState({
-    audible: false,
-    icon: false,
-    video: "muted",
-  });
-
-  const setVolumeOnClick = () => {
-    setVolume({
-      audible: true,
-      icon: true,
-      video: "",
-    });
-  };
+  const baseUrl = "https://johnbartmann.com/getjohnnyjazz";
+  const [volumeIcon, setVolumeIcon] = useState(false);
+  const [videoMuted, setVideoMuted] = useState("muted");
 
   const vidUrl = "https://getjohnnyjazz.com/resources/jjvid.mp4";
+  const setVolumeOnClick = () => {
+    setVolumeIcon(!volumeIcon);
+    setVideoMuted(videoMuted == "muted" ? "" : "muted");
+  };
 
   return (
-    <div className="App">
-      <video className="video" src={vidUrl} autoPlay loop muted />
-      <div className="navbar-container">
-        <div>The navbar</div>
-        <div onClick={setVolumeOnClick}>
-          {volume ? <FaVolumeUp /> : <FaVolumeMute />}
-        </div>
+    <div>
+      <div className="app-container">
+        <video
+          className="video"
+          src={vidUrl}
+          autoPlay
+          loop
+          muted={videoMuted}
+        />
+        <div className="header-container"></div>
+        <BrowserRouter>
+          {/* <Navbar /> */}
+          <div className="navbar">
+            <Link to="/">
+              <h1 className="btn btn-outline-warning p-2 m-2 btn-lg btn-bold">
+                ABOUT
+              </h1>
+            </Link>
+            <Link to="/visuals">
+              {" "}
+              <h1 className="btn btn-outline-warning p-2 m-2 btn-lg btn-bold">
+                VISUALS
+              </h1>
+            </Link>
+            <div onClick={setVolumeOnClick} className="player-icon">
+              {volumeIcon ? (
+                <FaVolumeUp size="2rem" />
+              ) : (
+                <FaVolumeMute size="2rem" />
+              )}
+            </div>
+          </div>
+          <Routes>
+            <Route index element={<About />} />
+            <Route path="/visuals" element={<Visuals />} />
+          </Routes>
+        </BrowserRouter>
       </div>
-      <div>
-        <h1>Title</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod corporis
-          alias blanditiis quas vitae, ducimus recusandae hic! Sed nihil,
-          consequuntur, voluptas sint dolor sit aliquam id adipisci, beatae unde
-          blanditiis.
-        </p>
-      </div>
-      <div className="contact-container">
-        <h1>Contact</h1>
-        <p>Book JohnnyJazz</p>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );

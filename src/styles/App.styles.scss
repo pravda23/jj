@@ -1,35 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
-.App {
+.app-container {
+  background-color: hsla(220, 13%, 18%, 0.6);
   text-align: left;
-  background-color: hsla(220, 13%, 18%, 0.4);
-
-  min-height: 100vh;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
-  // align-items: center;
-  justify-content: space-around;
-  font-size: calc(10px + 2vmin);
+  // align-items: top;
+  justify-content: flex-start;
+  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial;
+  font-size: calc(15px + 2vmin);
   color: white;
   padding: 1rem;
 }
 
-.player-icons {
-  background-image: url("https://johnbartmann.com/images/JBCOM-header-narrow-500.jpg");
+.footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 25vh;
+  text-align: right;
+  background-color: hsla(220, 13%, 18%, 0.6);
+  padding: 1rem;
+  color: white;
+  font-size: calc(10px + 2vmin);
 }
 
-.a {
-  color: #61dafb;
+a {
+  color: #ffff00;
+  text-decoration: none;
 }
 
-.navbar-container {
+.header-container {
+  background-image: url("https://johnbartmann.com/getjohnnyjazz/resources/header-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 15vh;
+  width: "100%";
+  // height: 30vh;
+  // padding: 0.5em;
+  border-bottom: 2px solid #ffd21d;
+  margin-bottom: 1rem;
+}
+
+.navbar {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  padding-right: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.header-title {
+  padding-right: 0.5rem;
+}
+
+.title-icon {
+  display: flex;
   justify-content: space-between;
-  max-height: 15vh;
-  padding: 0.5em;
+  align-items: center;
+}
+
+.player-icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #ffd21d;
 }
 
 .video {
@@ -51,8 +94,15 @@
   z-index: -1;
 }
 
-.contact-container {
+.footer-container {
   text-align: right;
+}
+.cta-btn {
+  display: inline-block;
+  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial;
+  border-radius: 0.5rem;
+  background-color: #00a8c5;
+  padding: 1.5rem;
 }
 
 // animation
