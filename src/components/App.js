@@ -37,12 +37,12 @@ function App() {
                 ABOUT
               </h1>
             </Link>
-            <Link to="/visuals">
+            {/* <Link to="/visuals">
               {" "}
               <h1 className="btn btn-outline-warning p-2 m-2 btn-lg btn-bold">
                 VISUALS
               </h1>
-            </Link>
+            </Link> */}
             <div onClick={setVolumeOnClick} className="player-icon">
               {volumeIcon ? (
                 <FaVolumeUp size="2rem" />
