@@ -1,11 +1,27 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { FaTiktok, FaInstagram, FaFacebook } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaWhatsapp,
+  FaTiktok,
+  FaInstagram,
+  FaFacebook,
+  FaArrowRight,
+} from "react-icons/fa";
 const Footer = () => {
   return (
     <>
       <div className="footer-container">
         <p className="cta-btn">
-          <a href="mailto:music@johnbartmann.com">BOOK NOW</a>
+          <span className="bouncer">
+            BOOK NOW <FaArrowRight />
+          </span>
+
+          <a href="https://wa.link/zed59o" target="_blank">
+            <FaWhatsapp className="m-1" fontSize="2rem" color="#ffd21d" />
+          </a>
+          <a href="mailto:music@johnbartmann.com" target="_blank">
+            <FaEnvelope className="m-1" fontSize="2rem" color="#ffd21d" />
+          </a>
         </p>
       </div>
       <div>
