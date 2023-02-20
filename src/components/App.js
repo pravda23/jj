@@ -5,6 +5,14 @@ import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 import About from "./About.component";
 import Footer from "./Footer.component";
 import Visuals from "./Visuals.component";
+import {
+  FaEnvelope,
+  FaWhatsapp,
+  FaTiktok,
+  FaInstagram,
+  FaFacebook,
+  FaArrowRight,
+} from "react-icons/fa";
 
 function App() {
   const [volumeIcon, setVolumeIcon] = useState(false);
@@ -32,16 +40,17 @@ function App() {
         <BrowserRouter>
           <div className="navbar">
             <Link to="/">
-              <h1 className="btn btn-outline-warning p-2 m-2 btn-lg btn-bold">
+              <h1 className="btn btn-outline-warning p-2 m-1 btn-lg btn-bold">
                 ABOUT
               </h1>
             </Link>
             <Link to="/visuals">
               {" "}
-              <h1 className="btn btn-outline-warning p-2 m-2 btn-lg btn-bold">
+              <h1 className="btn btn-outline-warning p-2 m-1 btn-lg btn-bold">
                 VISUALS
               </h1>
             </Link>
+
             <div onClick={setVolumeOnClick} className="player-icon">
               {volumeIcon ? (
                 <FaVolumeUp size="2rem" />
