@@ -10,14 +10,16 @@ function App() {
   const [volumeIcon, setVolumeIcon] = useState(false);
   const [videoMuted, setVideoMuted] = useState("muted");
 
-  const vidUrl = "https://getjohnnyjazz.com/resources/jjvid.mp4";
+  const vidUrl = "https://getjohnnyjazz.com/resources/love720.mp4";
+  console.log(typeof vidUrl);
+
   const setVolumeOnClick = () => {
     setVolumeIcon(!volumeIcon);
-    setVideoMuted(videoMuted == "muted" ? "" : "muted");
+    setVideoMuted(videoMuted === "muted" ? "" : "muted");
   };
 
   return (
-    <div class="overlay">
+    <div className="overlay">
       <div className="app-container">
         <video
           className="video"
@@ -28,7 +30,6 @@ function App() {
         />
         <div className="header-container"></div>
         <BrowserRouter>
-          {/* <Navbar /> */}
           <div className="navbar">
             <Link to="/">
               <h1 className="btn btn-outline-warning p-2 m-2 btn-lg btn-bold">
@@ -49,6 +50,7 @@ function App() {
               )}
             </div>
           </div>
+
           <Routes>
             <Route index element={<About />} />
             <Route path="/visuals" element={<Visuals />} />

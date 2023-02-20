@@ -24,14 +24,8 @@
   padding: 1rem;
 }
 
-.footer {
-  display: flex;
-  flex-direction: column;
-  // min-height: 40vh;
-  text-align: right;
-  padding: 1rem;
-  color: white;
-  font-size: calc(10px + 2vmin);
+.text-container {
+  padding: 0;
 }
 
 a {
@@ -74,17 +68,21 @@ a {
 }
 
 .player-icon {
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  // justify-content: flex-end;
+  right: 0.5rem;
   align-items: center;
   color: #ffd21d;
+  animation-name: throb;
+  animation-duration: 1200ms;
+  animation-iteration-count: infinite;
 }
 
 .insta-container {
   height: 100vh;
   border: 1px solid #ffd21d;
   border-radius: 5px;
-  background-color: hsla(220, 220, 220, 0.5);
+  background-color: hsla(220, 220, 220, 1);
 }
 
 .insta-container::-webkit-scrollbar {
@@ -115,6 +113,22 @@ a {
   justify-content: flex-end;
   text-align: right;
 }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  // min-height: 40vh;
+  text-align: right;
+  padding: 1rem;
+  color: white;
+  font-size: calc(10px + 2vmin);
+}
+
+.social-icons {
+  padding: 0.5rem 0 0 0;
+  border-top: 2px solid #ffd21d;
+}
+
 .cta-btn {
   display: flex;
   justify-content: flex-end;
@@ -144,11 +158,24 @@ a {
   }
 }
 
+@keyframes throb {
+  0% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
 // media queries
 
 @media (min-width: 802px) {
+  .text-container {
+    text-align: center;
+  }
+
   .insta-container {
-    height: 70vh;
+    height: 100vh;
   }
 
   .video {

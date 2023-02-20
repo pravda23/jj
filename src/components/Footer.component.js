@@ -24,7 +24,7 @@ const Footer = () => {
           </a>
         </p>
       </div>
-      <div>
+      <div className="social-icons">
         <a href="https://tiktok.com/@getjohnnyjazz" target="_blank">
           <FaTiktok className="m-1" fontSize="2rem" color="#ffd21d" />
         </a>
