@@ -5,6 +5,9 @@ import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 import Home from "./Home.component";
 import Footer from "./Footer.component";
 import Visuals from "./Visuals.component";
+import Affiliates from "./Affiliates.component";
+import Social from "./Social.component";
+import Contact from "./Contact.component";
 
 function App() {
   const [volumeIcon, setVolumeIcon] = useState(false);
@@ -74,9 +77,11 @@ function App() {
           </Routes>
         </BrowserRouter>
       </div>
-      <div className="footer">
-        <Footer />
-      </div>
+
+      {/* <Footer /> */}
+      {/* <Contact /> */}
+
+      {/* <Social /> */}
     </div>
   );
 }

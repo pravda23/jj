@@ -1,5 +1,5 @@
 import Social from "./Social.component";
-import Affiliates from "./Affiliates.component";
+
 import Contact from "./Contact.component";
 
 const Footer = () => {
@@ -9,12 +9,7 @@ const Footer = () => {
         <div className="cta-btn">
           <Contact />
         </div>
-        <div className="affiliates">
-          <Affiliates />
-        </div>
       </div>
-
-      <Social />
     </>
   );
 };

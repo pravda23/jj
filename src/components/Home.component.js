@@ -1,6 +1,8 @@
 import Affiliates from "./Affiliates.component";
+import Social from "./Social.component";
+import Contact from "./Contact.component";
 
-const About = () => {
+const Home = () => {
   return (
     <div>
       <div className="text-container">
@@ -9,8 +11,11 @@ const About = () => {
           JohnnyJazz!
         </p>
       </div>
+      <Contact />
+      <Affiliates />
+      <Social />
     </div>
   );
 };
 
-export default About;
+export default Home;

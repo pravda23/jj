@@ -9,7 +9,7 @@ import {
 
 const Contact = () => {
   return (
-    <div>
+    <div className="cta-btn">
       <h1 className="bouncer">
         <div>BOOK NOW</div>
         <div>

@@ -1,3 +1,9 @@
+import Home from "./Home.component";
+import Footer from "./Footer.component";
+import Affiliates from "./Affiliates.component";
+import Social from "./Social.component";
+import Contact from "./Contact.component";
+
 const Visuals = () => {
   const instaId = "57626723501";
   return (
@@ -12,6 +18,8 @@ const Visuals = () => {
         ></iframe>
         <script>iFrameResize();</script>
       </div>
+      <Contact />
+      <Social />
     </div>
   );
 };
