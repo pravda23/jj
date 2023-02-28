@@ -1,8 +1,33 @@
+import ImageGallery from "react-image-gallery";
+
 const Affiliates = () => {
+  const images = [
+    {
+      original: "https://getjohnnyjazz.com/resources/boschlogo.png",
+      originalClass: "affiliates",
+      originalHeight: ".5rem",
+      originalWidth: ".5rem",
+    },
+    {
+      original: "https://getjohnnyjazz.com/resources/cavallilogo.png",
+      originalClass: "affiliates",
+      originalHeight: ".5rem",
+      originalWidth: ".5rem",
+    },
+  ];
+
   return (
-    <div>
-      <div className="affiliates">
-        <img
+    <div className="affiliates">
+      <h3>CLIENTELE</h3>
+      <ImageGallery
+        items={images}
+        showPlayButton={false}
+        showFullscreenButton={false}
+        autoPlay={true}
+        showNav={false}
+      />
+
+      {/* <img
           src="https://getjohnnyjazz.com/resources/boschlogo.png"
           alt="boschendal"
         />
@@ -29,8 +54,7 @@ const Affiliates = () => {
         <img
           src="https://getjohnnyjazz.com/resources/kyknetlogo.png"
           alt="boschendal"
-        />
-      </div>
+        /> */}
     </div>
   );
 };

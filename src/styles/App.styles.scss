@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
 
 * {
   box-sizing: border-box;
@@ -6,13 +7,13 @@
 
 .overlay {
   min-height: 100vh;
-  background-color: hsla(220, 13%, 18%, 0.6);
+  background-color: hsla(220, 13%, 18%, 0.8);
   z-index: 10;
 }
 
 .app-container {
   text-align: left;
-  min-height: 70vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   // align-items: top;
@@ -22,6 +23,10 @@
   font-size: calc(15px + 2vmin);
   color: white;
   padding: 1rem;
+}
+
+.app-container > p {
+  font-size: calc(15px + 3vmin);
 }
 
 .text-container {
@@ -44,8 +49,6 @@ a {
   align-items: center;
   min-height: 15vh;
   width: "100%";
-  // height: 30vh;
-  // padding: 0.5em;
   border-bottom: 2px solid #ffd21d;
   margin-bottom: 1rem;
 }
@@ -73,21 +76,32 @@ a {
   // justify-content: flex-end;
   right: 0.5rem;
   align-items: center;
-  color: #ffd21d;
+  color: hsl(48, 100%, 56%);
   animation-name: throb;
   animation-duration: 1200ms;
   animation-iteration-count: infinite;
 }
 
 .affiliates {
-  padding: 1rem;
+  margin-top: 2rem;
+  // border-radius: 1rem;
+  mix-blend-mode: overlay;
 }
 
 .affiliates > img {
-  width: 5rem;
+  width: 6rem;
   height: auto;
+  mix-blend-mode: overlay;
   padding: 0.5rem;
-  border-radius: 1rem;
+  border-radius: 0.9rem;
+}
+
+.affiliates > h3 {
+  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  color: hsl(0, 0%, 100%, 100%);
 }
 
 .video {
@@ -123,14 +137,15 @@ a {
 .footer-container {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   text-align: right;
+  border: 1px solid red;
 }
 
 .footer {
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
-  // min-height: 40vh;
-  text-align: right;
   padding: 1rem;
   color: white;
   font-size: calc(10px + 2vmin);
@@ -144,18 +159,23 @@ a {
 
 .cta-btn {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   font-family: "Oswald", "Helvetica Neue", Helvetica, Arial;
-  border-radius: 0.5rem;
-  background-color: #00a8c5;
-  padding: 1.2rem;
+  // background-color: #004b58;
   color: #ffd21d;
+}
+
+.contact-icons {
+  padding: 1.2rem;
+  border-radius: 0.5rem;
   border: 1px solid #ffd21d;
 }
 
 .bouncer {
   display: flex;
+  flex-direction: column;
+  font-size: 2rem;
   align-items: center;
   animation-duration: 1200ms;
   animation-name: bouncer;
@@ -164,10 +184,10 @@ a {
 
 @keyframes bouncer {
   0% {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
   50% {
-    transform: translateX(-10%);
+    transform: translateY(14%);
   }
 }
 
@@ -190,7 +210,7 @@ a {
   .affiliates > img {
     width: 8rem;
     height: auto;
-    padding: 0.5rem;
+    padding: 0rem 0.5rem 0 0;
     border-radius: 1rem;
   }
 

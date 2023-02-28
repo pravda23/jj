@@ -2,32 +2,39 @@ import { Routes, Route, BrowserRouter, Link } from "react-router-dom";
 import "../styles/App.styles.scss";
 import { useState } from "react";
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
-import About from "./About.component";
+import Home from "./Home.component";
 import Footer from "./Footer.component";
 import Visuals from "./Visuals.component";
-import {
-  FaEnvelope,
-  FaWhatsapp,
-  FaTiktok,
-  FaInstagram,
-  FaFacebook,
-  FaArrowRight,
-} from "react-icons/fa";
 
 function App() {
   const [volumeIcon, setVolumeIcon] = useState(false);
   const [videoMuted, setVideoMuted] = useState("muted");
 
   const vidUrl = "https://getjohnnyjazz.com/resources/love720.mp4";
-  console.log(typeof vidUrl);
 
   const setVolumeOnClick = () => {
     setVolumeIcon(!volumeIcon);
     setVideoMuted(videoMuted === "muted" ? "" : "muted");
   };
 
+  // let startPlayPromise = vidUrl.play();a
+
+  // if (startPlayPromise !== undefined) {
+  //   startPlayPromise.then(() => {
+  //     // Start whatever you need to do only after playback
+  //     // has begun.
+  //   }).catch(error => {
+  //     if (error.name === "NotAllowedError") {
+  //       doSomethingToInformTheUser();
+  //     } else {
+  //       // Handle a load or playback error
+  //     }
+  //   });
+  // }
+
   return (
     <div className="overlay">
+      {/* <button onClick={stopPlaying}>Stop</button> */}
       <div className="app-container">
         <video
           className="video"
@@ -36,12 +43,13 @@ function App() {
           loop
           muted={videoMuted}
         />
+
         <div className="header-container"></div>
         <BrowserRouter>
           <div className="navbar">
             <Link to="/">
               <h1 className="btn btn-outline-warning p-2 m-1 btn-lg btn-bold">
-                ABOUT
+                HOME
               </h1>
             </Link>
             <Link to="/visuals">
@@ -61,7 +69,7 @@ function App() {
           </div>
 
           <Routes>
-            <Route index element={<About />} />
+            <Route index element={<Home />} />
             <Route path="/visuals" element={<Visuals />} />
           </Routes>
         </BrowserRouter>

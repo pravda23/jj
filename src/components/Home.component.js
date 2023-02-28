@@ -8,7 +8,6 @@ const About = () => {
           Multi-instrumental solo live electronic musician and event DJ. Get
           JohnnyJazz!
         </p>
-        <Affiliates />
       </div>
     </div>
   );
