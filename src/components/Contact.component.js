@@ -16,13 +16,31 @@ const Contact = () => {
           <FaAngleDown />
         </div>
       </h1>
-      <div className="contact-icons">
-        <a href="https://wa.link/zed59o" target="_blank">
-          <FaWhatsapp className="m-1 p-2" fontSize="4rem" color="#ffd21d" />
-        </a>
-        <a href="mailto:music@johnbartmann.com" target="_blank">
-          <FaEnvelope className="m-1 p-2" fontSize="4rem" color="#ffd21d" />
-        </a>
+      <div className="contact-icons-container">
+        <div className="contact-icon-container">
+          <div>
+            <a
+              className="contact-icons"
+              href="https://wa.link/zed59o"
+              target="_blank"
+            >
+              <FaWhatsapp className="m-1 p-2" fontSize="6rem" />
+            </a>
+          </div>
+          <div>WHATSAPP</div>
+        </div>
+        <div className="contact-icon-container">
+          <div>
+            <a
+              className="contact-icons"
+              href="mailto:music@johnbartmann.com"
+              target="_blank"
+            >
+              <FaEnvelope className="m-1 p-2" fontSize="6rem" />
+            </a>
+          </div>
+          <div>EMAIL</div>
+        </div>
       </div>
     </div>
   );

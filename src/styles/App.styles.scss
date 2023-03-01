@@ -95,15 +95,15 @@ a {
 .affiliates {
   // margin-top: 2rem;
   // mix-blend-mode: overlay;
-  background-color: hsl(48, 100%, 56%, 20%);
+  // background-color: hsl(48, 100%, 56%, 20%);
 }
 
 .affiliates-img {
-  mix-blend-mode: overlay;
+  mix-blend-mode: normal;
   // width: 3rem;
   // height: auto;
   padding: 0.5rem;
-  border-radius: 0.9rem;
+  border-radius: 10%;
 }
 
 .affiliates > h3 {
@@ -161,7 +161,7 @@ a {
   font-size: calc(10px + 2vmin);
 }
 
-.social-icons {
+.social-icons-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -171,6 +171,10 @@ a {
   padding: 1rem 0 0 0;
   border-top: 2px solid #ffd21d;
   font-size: 0.9rem;
+}
+
+.social-icons:hover {
+  color: white;
 }
 
 .cta-btn {
@@ -184,10 +188,22 @@ a {
   color: #ffd21d;
 }
 
-.contact-icons {
-  padding: 1.2rem;
-  border-radius: 0.5rem;
-  border: 1px solid #ffd21d;
+.contact-icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icons-container {
+  display: flex;
+  padding: 1rem;
+  // border-radius: 0.5rem;
+  border-top: 1px solid #ffd21d;
+}
+
+.contact-icons:hover {
+  color: white;
 }
 
 .bouncer {

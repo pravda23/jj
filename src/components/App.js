@@ -3,11 +3,7 @@ import "../styles/App.styles.scss";
 import { useState } from "react";
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 import Home from "./Home.component";
-import Footer from "./Footer.component";
 import Visuals from "./Visuals.component";
-import Affiliates from "./Affiliates.component";
-import Social from "./Social.component";
-import Contact from "./Contact.component";
 
 function App() {
   const [volumeIcon, setVolumeIcon] = useState(false);
@@ -20,24 +16,8 @@ function App() {
     setVideoMuted(videoMuted === "muted" ? "" : "muted");
   };
 
-  // let startPlayPromise = vidUrl.play();a
-
-  // if (startPlayPromise !== undefined) {
-  //   startPlayPromise.then(() => {
-  //     // Start whatever you need to do only after playback
-  //     // has begun.
-  //   }).catch(error => {
-  //     if (error.name === "NotAllowedError") {
-  //       doSomethingToInformTheUser();
-  //     } else {
-  //       // Handle a load or playback error
-  //     }
-  //   });
-  // }
-
   return (
     <div className="overlay">
-      {/* <button onClick={stopPlaying}>Stop</button> */}
       <div className="app-container">
         <video
           className="video"
@@ -77,11 +57,6 @@ function App() {
           </Routes>
         </BrowserRouter>
       </div>
-
-      {/* <Footer /> */}
-      {/* <Contact /> */}
-
-      {/* <Social /> */}
     </div>
   );
 }
