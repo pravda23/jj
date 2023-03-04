@@ -4,6 +4,8 @@ import { useState } from "react";
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 import Home from "./Home.component";
 import Visuals from "./Visuals.component";
+import Auth from "./Auth.component";
+import { getInsta } from "./InstaAPI.component";
 
 function App() {
   const [volumeIcon, setVolumeIcon] = useState(false);
@@ -15,6 +17,8 @@ function App() {
     setVolumeIcon(!volumeIcon);
     setVideoMuted(videoMuted === "muted" ? "" : "muted");
   };
+
+  getInsta();
 
   return (
     <div className="overlay">
@@ -54,6 +58,7 @@ function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path="/visuals" element={<Visuals />} />
+            <Route path="/auth" element={<Auth />} />
           </Routes>
         </BrowserRouter>
       </div>

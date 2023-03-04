@@ -25,17 +25,12 @@ const Affiliates = () => {
     },
   ];
 
-  const imageObjectUpdater = (i) => {
-    i.map((e) => {
-      e.originalClass = "affiliates";
-      e.originalHeight = "100px";
-      e.originalWidth = "100px";
-    });
-  };
+  images.map((e) => {
+    e.originalClass = "affiliates";
+    e.originalHeight = "100px";
+    e.originalWidth = "100px";
+  });
 
-  imageObjectUpdater(images);
-
-  console.log(images);
   return (
     <div className="affiliates">
       <div className="affiliates-block">

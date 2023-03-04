@@ -20,7 +20,7 @@ const Contact = () => {
         <div className="contact-icon-container">
           <div>
             <a
-              className="contact-icons"
+              className="contact-icon"
               href="https://wa.link/zed59o"
               target="_blank"
             >
@@ -32,14 +32,14 @@ const Contact = () => {
         <div className="contact-icon-container">
           <div>
             <a
-              className="contact-icons"
+              className="contact-icon"
               href="mailto:music@johnbartmann.com"
               target="_blank"
             >
               <FaEnvelope className="m-1 p-2" fontSize="6rem" />
             </a>
           </div>
-          <div>EMAIL</div>
+          <div className="contact-icon">EMAIL</div>
         </div>
       </div>
     </div>

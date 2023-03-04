@@ -92,12 +92,6 @@ a {
   padding: 1rem;
 }
 
-.affiliates {
-  // margin-top: 2rem;
-  // mix-blend-mode: overlay;
-  // background-color: hsl(48, 100%, 56%, 20%);
-}
-
 .affiliates-img {
   mix-blend-mode: normal;
   // width: 3rem;
@@ -188,13 +182,6 @@ a {
   color: #ffd21d;
 }
 
-.contact-icon-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .contact-icons-container {
   display: flex;
   padding: 1rem;
@@ -202,7 +189,16 @@ a {
   border-top: 1px solid #ffd21d;
 }
 
-.contact-icons:hover {
+.contact-icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-icon-container:hover {
+  color: white;
+}
+.contact-icon:hover {
   color: white;
 }
 
