@@ -33,7 +33,7 @@ const Contact = () => {
           <div>
             <a
               className="contact-icon"
-              href="mailto:music@johnbartmann.com"
+              href="mailto:hi@johnbartmann.com"
               target="_blank"
             >
               <FaEnvelope className="m-1 p-2" fontSize="6rem" />

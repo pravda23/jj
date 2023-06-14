@@ -40,7 +40,7 @@ a {
 }
 
 .header-container {
-  background-image: url("https://johnbartmann.com/getjohnnyjazz/resources/header-mobile.png");
+  background-image: url("https://getjohnnyjazz.com/resources/header-mobile.png");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
@@ -74,7 +74,7 @@ a {
 .player-icon {
   position: absolute;
   // justify-content: flex-end;
-  right: 0.5rem;
+  left: 0.5rem;
   align-items: center;
   color: hsl(48, 100%, 56%);
   animation-name: throb;

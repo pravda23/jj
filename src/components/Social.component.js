@@ -10,7 +10,7 @@ const Social = () => {
   return (
     <>
       <div className="social-icons-container">
-        <div>
+        {/* <div>
           <a
             className="social-icons"
             href="https://tiktok.com/@getjohnnyjazz"
@@ -33,11 +33,11 @@ const Social = () => {
             <FaFacebook className="m-1 p-2" fontSize="3rem" />
           </a>
         </div>
-        <div>
-          <a href="https://johnbartmann.com/" target="_blank">
-            © 2023 JOHN BARTMANN
-          </a>
-        </div>
+        <div> */}
+        <a href="https://johnbartmann.com/" target="_blank">
+          © 2023 Lampshade Design
+        </a>
+        {/* </div> */}
       </div>
     </>
   );

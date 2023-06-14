@@ -4,21 +4,18 @@ import { useState } from "react";
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 import Home from "./Home.component";
 import Visuals from "./Visuals.component";
-import Auth from "./Auth.component";
-import { getInsta } from "./InstaAPI.component";
+// import { getInsta } from "./InstaAPI.component";
 
 function App() {
   const [volumeIcon, setVolumeIcon] = useState(false);
   const [videoMuted, setVideoMuted] = useState("muted");
 
-  const vidUrl = "https://getjohnnyjazz.com/resources/love720.mp4";
+  const vidUrl = "https://getjohnnyjazz.com/resources/jjsd10s.mp4";
 
   const setVolumeOnClick = () => {
     setVolumeIcon(!volumeIcon);
     setVideoMuted(videoMuted === "muted" ? "" : "muted");
   };
-
-  getInsta();
 
   return (
     <div className="overlay">
@@ -34,7 +31,7 @@ function App() {
         <div className="header-container"></div>
         <BrowserRouter>
           <div className="navbar">
-            <Link to="/">
+            {/* <Link to="/">
               <h1 className="btn btn-outline-warning p-2 m-1 btn-lg btn-bold">
                 HOME
               </h1>
@@ -44,7 +41,7 @@ function App() {
               <h1 className="btn btn-outline-warning p-2 m-1 btn-lg btn-bold">
                 VISUALS
               </h1>
-            </Link>
+            </Link> */}
 
             <div onClick={setVolumeOnClick} className="player-icon">
               {volumeIcon ? (
@@ -58,7 +55,6 @@ function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path="/visuals" element={<Visuals />} />
-            <Route path="/auth" element={<Auth />} />
           </Routes>
         </BrowserRouter>
       </div>
